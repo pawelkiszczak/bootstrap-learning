@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-    <title>Bootstrap Sandbox | Popovers & Tooltips</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="mb-5">Popovers & Tooltips</h1>
 
-      <!-- Popover -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <title>Bootstrap Sandbox | Popovers & Tooltips</title>
+</head>
 
-      <br /><br />
+<body>
+  <div class="container">
+    <h1 class="mb-5">Popovers & Tooltips</h1>
 
-      <!-- Tooltip -->
+    <!-- Popover -->
+    <button class="btn btn-danger btn-lg" id="popover" data-bs-toggle="popover" data-bs-title="Popover Title"
+      data-bs-content="Popover contents">Toggle popover</button>
 
-      <!-- Don't go past here -->
-    </div>
-    <div style="margin-top: 350px"></div>
 
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
-  </body>
+    <br /><br />
+
+    <!-- Tooltip -->
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, facilis dicta saepe possimus similique eum
+      incidunt obcaecati facere nesciunt, sit harum <a href="#" data-bs-toggle="tooltip"
+        data-bs-title="Tooltip One">tooltip one</a>omnis tempora exercitationem nemo earum vel.
+      Mollitia, harum itaque
+      deleniti voluptatibus eius ducimus saepe praesentium necessitatibus amet doloribus error repellat tempore non quas
+      reprehenderit voluptatum? Consectetur libero mollitia nulla delectus repellat? Ipsum, exercitationem fuga.
+      Distinctio ad magnam pariatur, vel quaerat necessitatibus tempora nemo quam sed aut eveniet commodi, similique nam
+      cum quod ullam natus porro possimus. <a href="#" data-bs-toggle="tooltip" data-bs-title="Tooltip Two">tooltip
+        two</a>Dolor
+      magnam minima maiores beatae ut, assumenda ullam. Voluptatem quaerat
+      vero adipisci ipsum, dolorum ducimus doloribus similique officiis asperiores totam eligendi quis iusto.
+
+    </p>
+
+    <!-- Don't go past here -->
+  </div>
+  <div style="margin-top: 350px"></div>
+
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const popoverEl = document.getElementById('popover');
+    const popover = new bootstrap.Popover(popoverEl);
+
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    console.log(tooltipTriggerList);
+    const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl));
+
+  </script>
+</body>
+
 </html>
