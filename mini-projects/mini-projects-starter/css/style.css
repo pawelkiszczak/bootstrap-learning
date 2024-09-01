@@ -1,0 +1,37 @@
+@media(min-width: 800px) {
+    .container {
+        width: 800px;
+    }
+}
+
+.card {
+    width: 18rem;
+    margin: 2rem;
+}
+
+.subscribe-btn {
+    display: flex;
+    width: 80%;
+}
+
+.card-header strong {
+    font-weight: 1000;
+    font-size: 18px;
+}
+
+.card-light {
+    background-color: white;
+    border: none;
+}
+
+.card-dark {
+    background-color: black;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.body-2 {
+    font-family: 'Poppins', sans-serrif;
+}
